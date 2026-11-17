@@ -1,0 +1,34 @@
+name: source-only-checks
+
+on:
+  pull_request:
+  push:
+    branches: [main]
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Compile Python scripts
+        run: python -m py_compile scripts/*.py
+      - name: Reject result artifacts
+        run: |
+          set -e
+          bad=$(git ls-files | grep -E '(^data/|^results/|^report/|^screenshots/|^figures/|\.pdf$|\.png$|\.zip$|\.key$|notebooks/movie_analytics\.ipynb$)' || true)
+          if [ -n "$bad" ]; then
+            echo "Result artifacts are tracked:"
+            echo "$bad"
+            exit 1
+          fi
+      - name: Reject absolute paths
+        run: |
+          set -e
+          if git grep -nE '[A-Za-z]:\\|/Users/|/home/' -- . ':!docs/spec/*'; then
+            echo "Absolute paths found"
+            exit 1
+          fi
