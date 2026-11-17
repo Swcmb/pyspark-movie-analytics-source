@@ -1,4 +1,4 @@
-name: source-only-checks
+name: repository-checks
 
 on:
   pull_request:
@@ -16,12 +16,12 @@ jobs:
           python-version: '3.11'
       - name: Compile Python scripts
         run: python -m py_compile scripts/*.py
-      - name: Reject result artifacts
+      - name: Reject generated artifacts
         run: |
           set -e
           bad=$(git ls-files | grep -E '(^data/|^results/|^report/|^screenshots/|^figures/|\.pdf$|\.png$|\.zip$|\.key$|notebooks/movie_analytics\.ipynb$)' || true)
           if [ -n "$bad" ]; then
-            echo "Result artifacts are tracked:"
+            echo "Generated artifacts are tracked:"
             echo "$bad"
             exit 1
           fi

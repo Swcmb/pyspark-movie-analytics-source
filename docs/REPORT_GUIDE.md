@@ -1,6 +1,6 @@
 # Report Guide
 
-The PDF report is generated from `results/metrics.json`, local screenshots, and local figures. This repository contains no PDF, screenshots, figures, or metric outputs.
+The PDF report is generated from `results/metrics.json`, local screenshots, and local figures. The report is generated locally from the executed notebook outputs.
 
 ## Fixed Report Structure
 

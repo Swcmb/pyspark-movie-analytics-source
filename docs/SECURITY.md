@@ -1,20 +1,22 @@
 # Security
 
-## Repository Scope
+## Documentation Scope
 
-This repository is source-only. It must never contain:
+The documentation set describes the project source, local execution workflow, and generated artifacts.
 
-- datasets,
-- `results/metrics.json`,
-- executed notebooks with outputs,
-- PDF reports,
-- screenshots,
-- figures,
-- zip archives,
-- encrypted result archives,
+Managed separately from documentation:
+
+- raw datasets,
+- local `results/metrics.json`,
+- executed notebooks stored outside the template,
+- generated PDF reports,
+- generated screenshots,
+- generated figures,
+- generated zip archives,
+- generated encrypted archives,
 - credentials, tokens, or API keys.
 
-Generated artifacts stay in the local working copy and are consumed locally by `verify.py`.
+Generated artifacts are consumed locally by `verify.py` during report validation.
 
 ## Path Policy
 
