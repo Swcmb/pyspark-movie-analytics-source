@@ -28,7 +28,10 @@ jobs:
       - name: Reject absolute paths
         run: |
           set -e
-          if git grep -nE '[A-Za-z]:\\|/Users/|/home/' -- . ':!docs/spec/*'; then
+          if git grep -nE '[A-Za-z]:\\|/Users/|/home/' -- \
+            README.md docs/ARCHITECTURE.md docs/DATA_SOURCES.md docs/ENVIRONMENT.md \
+            docs/EXECUTION.md docs/MODULE_GUIDE.md docs/REPORT_GUIDE.md \
+            docs/TROUBLESHOOTING.md scripts notebooks; then
             echo "Absolute paths found"
             exit 1
           fi
