@@ -5,7 +5,7 @@ Document the PySpark movie analytics project with comprehensive guides, scripts,
 ## What Changed
 
 - Added project documentation under `docs/`.
-- Added a clean, output-free notebook template.
+- Added a clean notebook template.
 - Added reproducible generation and verification scripts.
 - Added `.gitignore` rules for generated artifacts.
 - Added an agent PR template.

@@ -6,7 +6,7 @@ Follow `ENVIRONMENT.md`. Confirm Spark 3.5.1, JDK 17, and the required Python pa
 
 ## 2. Put Raw Data in Place
 
-Follow `DATA_SOURCES.md`. The repository contains no data.
+Follow `DATA_SOURCES.md`. Raw data is prepared locally before execution.
 
 Expected layout:
 
@@ -41,7 +41,7 @@ This writes:
 notebooks/movie_analytics.ipynb
 ```
 
-The template committed to this repository has no outputs. The generated notebook is a local artifact and is not committed.
+The committed template has no outputs. Executed notebooks are produced by the local workflow.
 
 ## 5. Execute the Notebook
 

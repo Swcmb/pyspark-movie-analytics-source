@@ -9,7 +9,7 @@ The project turns a large MovieLens ratings dataset into:
 3. correlation and join-based behavior analysis,
 4. an ALS collaborative-filtering recommender.
 
-The repository intentionally stores source code only. Generated outputs are local artifacts.
+Generated outputs are written to local directories during execution.
 
 ## Logical Flow
 
