@@ -4,7 +4,7 @@
 
 The documentation set describes the project source, local execution workflow, and generated artifacts.
 
-Managed separately from documentation:
+Generated during local execution:
 
 - raw datasets,
 - local `results/metrics.json`,
