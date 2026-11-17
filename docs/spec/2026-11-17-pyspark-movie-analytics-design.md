@@ -5,12 +5,12 @@
 
 ## 1. 目的
 
-产出一份可直接提交的课程期末大作业，覆盖题目要求的五个模块（环境初始化、清洗、EDA、高级分析、ALS 推荐），并附带：
+构建一个覆盖五个模块（环境初始化、清洗、EDA、高级分析、ALS 推荐）的 PySpark 分析项目，并产出：
 
-- 可执行的 Jupyter Notebook（含真实运行输出）
-- 自动化截取的运行截图
+- 可执行的 Jupyter Notebook
+- 自动化生成的运行截图
 - 图表
-- PDF 实验报告
+- 分析 PDF 报告
 
 全程自动执行，用户零手工操作。
 
@@ -37,7 +37,7 @@
 
 ## 3. 边界
 
-**做：** 五个模块的全部子任务、notebook、截图、图表、PDF 报告、数据准备脚本、性能分析说明。
+**范围：** 五个模块的全部子任务、notebook、截图、图表、PDF 报告、数据准备脚本、性能分析说明。
 
 **不做：**
 
@@ -61,7 +61,7 @@
 │   ├── raw\            movies.csv, ratings.csv, tmdb_imdb.csv, links.parquet
 │   ├── parquet\        movies.parquet, ratings.parquet（Spark 写出）
 │   └── json\           movies.json（Spark 写出）
-├── notebooks\          movie_analytics.ipynb（含执行输出）, movie_analytics.html（截图源）
+├── notebooks\          movie_analytics.ipynb（执行产物）, movie_analytics.html（截图源）
 ├── figures\            matplotlib 图表 PNG
 ├── screenshots\        运行截图 PNG
 ├── results\            metrics.json（真实指标，由 notebook 写出）
