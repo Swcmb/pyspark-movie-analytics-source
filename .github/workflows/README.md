@@ -1,7 +1,7 @@
-# Source-only Check
+# Repository Checks
 
-This repository is source-only. CI fails when any result artifact is tracked or any committed file contains an absolute path.
+CI checks script syntax, repository hygiene, and relative-path usage.
 
-No Spark execution is performed in CI because datasets are intentionally excluded.
+Spark execution is performed locally after the datasets are prepared.
 
 Local verification steps are documented in `docs/EXECUTION.md`.

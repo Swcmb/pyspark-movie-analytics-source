@@ -1,6 +1,6 @@
 # Data Sources
 
-This repository contains no dataset and no derived result files.
+This project reads raw data from `data/raw/` and writes generated artifacts to local output directories.
 
 ## Required Raw Files
 
@@ -24,7 +24,7 @@ data/raw/tmdb_imdb.csv      # TMDB / IMDb metadata with runtime
 
 ## Source Notes
 
-MovieLens data is distributed by GroupLens. TMDB/IMDb metadata is a third-party dataset. Check each source’s license and terms before redistribution. This repository neither vendors nor redistributes those datasets.
+MovieLens data is distributed by GroupLens. TMDB/IMDb metadata is a third-party dataset. Check each source’s license and terms before redistribution. The project expects users to obtain the datasets from the appropriate sources.
 
 ## Runtime Join
 
